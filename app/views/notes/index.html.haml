@@ -1,0 +1,4 @@
+- @notes.each do |note|
+  .note-card
+    %h2= link_to note.title, note
+    = note.content
