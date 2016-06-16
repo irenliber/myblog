@@ -34,6 +34,18 @@ gem 'haml-rails', '~> 0.9.0'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'devise'
 
+gem 'rails_admin', github: 'sferik/rails_admin'
+# Use github rack-pjax to fix dependency versioning issue with Rails 5
+# https://github.com/sferik/rails_admin/issues/2532
+gem 'rack-pjax', github: 'afcapel/rack-pjax'
+# Use forked remotipart until following issues are resolved
+# https://github.com/JangoSteve/remotipart/issues/139
+# https://github.com/sferik/rails_admin/issues/2532
+gem 'remotipart', github: 'mshibuya/remotipart', ref: '3a6acb3'
+
+
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
