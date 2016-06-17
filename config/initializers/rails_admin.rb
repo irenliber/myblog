@@ -38,4 +38,23 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+  config.model 'Page' do
+    list do
+      field :title
+      field :position
+      field :active
+      field :start
+    end
+
+    edit do
+      field :title
+      field :content
+      field :position
+      field :active
+      field :start
+    end
+  end
+
+
 end
