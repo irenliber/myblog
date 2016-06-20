@@ -1,7 +1,7 @@
 .container
   .note-card
-    = @note.title
-    = @note.content
+    = @note.title.html_safe
+    = @note.content.html_safe
 
 
   = link_to "All notes", note_path, class: 'btn btn-default'

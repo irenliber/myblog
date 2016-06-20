@@ -43,7 +43,8 @@ gem 'rack-pjax', github: 'afcapel/rack-pjax'
 # https://github.com/sferik/rails_admin/issues/2532
 gem 'remotipart', github: 'mshibuya/remotipart', ref: '3a6acb3'
 
-
+gem 'ckeditor'
+gem 'paperclip'
 
 
 group :development, :test do

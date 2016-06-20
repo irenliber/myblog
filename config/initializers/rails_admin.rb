@@ -39,6 +39,13 @@ RailsAdmin.config do |config|
     # history_show
   end
 
+
+  config.model 'Note' do
+    edit
+      field :title, :ck_editor
+      field :content, :ck_editor
+  end
+
   config.model 'Page' do
     list do
       field :title
@@ -48,13 +55,14 @@ RailsAdmin.config do |config|
     end
 
     edit do
-      field :title
-      field :content
+      field :title, :ck_editor
+      field :content, :ck_editor
       field :position
       field :active
       field :start
     end
   end
+
 
 
 end
