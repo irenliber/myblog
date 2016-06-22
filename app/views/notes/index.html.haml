@@ -1,4 +1,11 @@
-- @notes.each do |note|
-  .note-card
-    %h2= link_to note.title.html_safe, note
-    = note.content.html_safe
+.img
+
+
+.container
+
+  - @notes.each do |note|
+    .note-card
+      %h2= link_to note.title.html_safe, note
+      .datetime
+        %p= note.created_at.strftime("%d %b %Y в %H:%M")
+      %hr
