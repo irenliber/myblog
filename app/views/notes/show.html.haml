@@ -1,7 +1,8 @@
-%nt.container
+.container
+  .padding
   .note-card
-    = @note.title.html_safe
-    = @note.content.html_safe
+    %h1= @note.title.html_safe
+    %p= @note.content.html_safe
 
 
   = link_to(@note.prev, html_options = {class: 'btn btn-default'}) do
