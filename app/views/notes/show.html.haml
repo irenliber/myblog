@@ -1,7 +1,15 @@
-.container
+%nt.container
   .note-card
     = @note.title.html_safe
     = @note.content.html_safe
 
 
-  = link_to "All notes", note_path, class: 'btn btn-default'
+  = link_to(@note.prev, html_options = {class: 'btn btn-default'}) do
+    %span.glyphicon.glyphicon-chevron-left
+    Previous note
+  = link_to(@note.next, html_options = {class: 'btn btn-default'}) do
+    Next note
+    %span.glyphicon.glyphicon-chevron-right
+
+  = link_to "All notes", notes_path, class: 'btn btn-default'
+
