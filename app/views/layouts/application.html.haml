@@ -6,7 +6,8 @@
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-
+    = stylesheet_link_tag params[:controller]
+    = javascript_include_tag params[:controller]
 
 %body
   %nav.navbar.navbar-inverse.navbar-fixed-top
@@ -26,4 +27,8 @@
 
   .container
     .padding
-    = yield
+  = yield
+
+  %footer
+    %a{:href => "https://github.com/irenliber"}
+      = image_tag ('GitHub-Mark-64px.png')
