@@ -1,11 +1,15 @@
-.img
+
 
 
 .container
-
+  .img
   - @notes.each do |note|
     .note-card
       %h1= link_to note.title.html_safe, note
       .datetime
         %p= note.created_at.strftime("%d %b %Y в %H:%M")
       %hr
+
+  %footer
+    %a{:href => "https://github.com/irenliber"}
+      = image_tag ('GitHub-Mark-64px.png')

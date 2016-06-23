@@ -2,15 +2,19 @@
   .padding
   .note-card
     %h1= @note.title.html_safe
-    %p= @note.content.html_safe
+    .datetime
+      %p= @note.created_at.strftime("%d %b %Y в %H:%M")
+      %hr
 
+    %p2= @note.content.html_safe
 
+  %br
   = link_to(@note.prev, html_options = {class: 'btn btn-default'}) do
     %span.glyphicon.glyphicon-chevron-left
     Previous note
-  = link_to(@note.next, html_options = {class: 'btn btn-default'}) do
+  = link_to(@note.next, html_options = {class: 'btn btn-default pull-right'}) do
     Next note
     %span.glyphicon.glyphicon-chevron-right
 
-  = link_to "All notes", notes_path, class: 'btn btn-default'
+  -#= link_to "All notes", notes_path, class: 'btn btn-default'
 
