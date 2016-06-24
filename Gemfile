@@ -45,6 +45,7 @@ gem 'remotipart', github: 'mshibuya/remotipart', ref: '3a6acb3'
 
 gem 'ckeditor'
 gem 'paperclip'
+gem 'font-awesome-sass', '~> 4.6.2'
 
 
 group :development, :test do

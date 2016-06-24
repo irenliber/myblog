@@ -1,12 +1,15 @@
-.container
-  .padding
-  .note-card
-    %h1= @note.title.html_safe
-    .datetime
-      %p= @note.created_at.strftime("%d %b %Y в %H:%M")
-      %hr
 
-    %p2= @note.content.html_safe
+.note-card
+  %h1= @note.title.html_safe
+  %br
+
+  %p2= @note.content.html_safe
+  %br
+  .datetime
+    %p= @note.created_at.strftime("%d %b %Y в %H:%M")
+
+
+
 
   %br
   = link_to(@note.prev, html_options = {class: 'btn btn-default'}) do
@@ -16,5 +19,5 @@
     Next note
     %span.glyphicon.glyphicon-chevron-right
 
-  -#= link_to "All notes", notes_path, class: 'btn btn-default'
+-#= link_to "All notes", notes_path, class: 'btn btn-default'
 
