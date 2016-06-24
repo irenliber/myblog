@@ -48,15 +48,18 @@ RailsAdmin.config do |config|
 
   config.model 'Page' do
     list do
+      field :avatar
       field :image
       field :title
       field :position
       field :active
       field :start
+
     end
 
     edit do
-      field :image, :ck_editor
+      field :avatar
+      field :image
       field :title, :ck_editor
       field :content, :ck_editor
       field :position
