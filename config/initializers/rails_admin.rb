@@ -49,7 +49,6 @@ RailsAdmin.config do |config|
   config.model 'Page' do
     list do
       field :avatar
-      field :image
       field :title
       field :position
       field :active
@@ -59,7 +58,6 @@ RailsAdmin.config do |config|
 
     edit do
       field :avatar
-      field :image
       field :title, :ck_editor
       field :content, :ck_editor
       field :position
