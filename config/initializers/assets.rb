@@ -8,7 +8,8 @@ pages.js
 notes.css
 notes.js
 )
-Rails.application.config.assets.precompile += %w( ckeditor/filebrowser/images/gal_del.png )
+
+Rails.application.config.assets.precompile += %w( ckeditor/* )
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
 
